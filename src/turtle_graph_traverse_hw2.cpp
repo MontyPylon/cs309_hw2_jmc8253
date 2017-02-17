@@ -37,9 +37,9 @@ bool travel_to_target(ros::Publisher velocity_pub, turtlesim::Pose pos, vector<d
     if(d < DISTANCE_THRESHOLD) {
         // We are within the threshold
         cout << "Within threshold, moving to next turtle" << endl;
-        msg.linear.x = 0.0;
-        msg.angular.z = 0.0;
-        velocity_pub.publish(msg);
+        //msg.linear.x = 0.0;
+        //msg.angular.z = 0.0;
+        //velocity_pub.publish(msg);
         return true;
     } else {
         double ratio = (next.at(1) - pos.y) / (next.at(0) - pos.x);
